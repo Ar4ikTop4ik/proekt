@@ -8,7 +8,7 @@
 
 body {
   background-color: #1a1a24;
-  color: #ffffff;
+  color: #00ff37;
   font-family: 'Press Start 2P', monospace;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ body {
 .settings-panel {
   width: 220px;
   background-color: #0f0f15;
-  border: 4px solid #ffffff;
+  border: 4px solid #00ff37;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -58,8 +58,8 @@ body {
   font-family: 'Press Start 2P', monospace;
   font-size: 10px;
   background-color: #1a1a24;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  color: #00ff37;
+  border: 2px solid #00ff37;
   padding: 8px;
   outline: none;
   cursor: pointer;
@@ -119,7 +119,7 @@ body {
 
 #gameCanvas {
   background-color: #0f0f15;
-  border: 4px solid #ffffff;
+  border: 4px solid #00ff37;
   image-rendering: pixelated;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
@@ -152,6 +152,6 @@ body {
 
 .overlay p {
   font-size: 9px;
-  color: #ffffff;
+  color: #00ff37;
   line-height: 1.6;
 }
