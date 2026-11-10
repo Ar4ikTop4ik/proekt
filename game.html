@@ -1,20 +1,64 @@
-<!-- game.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Snake</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Snake Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="main-layout">
+    <!-- Панель настроек слева -->
+    <aside class="settings-panel">
+      <h2>НАСТРОЙКИ</h2>
+
+      <div class="setting-group">
+        <label for="difficulty">СЛОЖНОСТЬ:</label>
+        <select id="difficulty">
+          <option value="180">Легко</option>
+          <option value="120" selected>Нормально</option>
+          <option value="75">Сложно</option>
+          <option value="45">Хардкор</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <label for="gridSize">РАЗМЕР ПОЛЯ:</label>
+        <select id="gridSize">
+          <option value="6">6x6</option>
+          <option value="12">12x12</option>
+          <option value="24" selected>24x24</option>
+          <option value="48">48x48</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <label for="foodCount">ЯБЛОК НА ПОЛЕ:</label>
+        <select id="foodCount">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <button id="startButton" class="btn-start">СТАРТ</button>
+    </aside>
+
+    <!-- Игровая зона -->
     <div class="game-container">
-        <div class="score-board">
-            <span class="score-label">APPLES:</span>
-            <span id="score">0</span>
-        </div>
+      <div class="score-board">
+        СЪЕДЕНО ЯБЛОК: <span id="score">0</span>
+      </div>
+      <div class="canvas-wrapper">
         <canvas id="gameCanvas" width="480" height="480"></canvas>
+        <div id="game-over" class="overlay hidden">
+          <h2>ИГРА ОКОНЧЕНА</h2>
+          <p>НАЖМИТЕ «СТАРТ» СЛЕВАДЛЯ НОВОЙ ИГРЫ</p>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
